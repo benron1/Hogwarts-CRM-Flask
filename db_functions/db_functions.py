@@ -38,13 +38,27 @@ class DbFunctions:
         for i in students_with_skill:
             print(i["num_students"])
 
+    def get_students_who_want_skill(self, skill):
+        students_with_want_skill = db.students.aggregate(
+            [{'$match': {"desired_skills": skill}}, {"$count": "num_students"}])
+        for i in students_with_want_skill:
+            return i['num_students']
+        return 0
+
+    def get_student_by_date(self, date):
+        student_by_date = db.students.aggregate([{'$match': {"date": date}}, {'$count': "students_added_today"}])
+        for i in student_by_date:
+            return i['students_added_today']
+        return 0
+
 
 test = DbFunctions()
 # for i in range(1,10):
 #     test.add_student({"name": "Rachel" + str(i), "existing_skills": ["1", "2", "3"]})
 
-test.add_student({"name": "Harry", "occupation": "Wizard", "existing_skills": ["Parseltongue"]})
+# test.add_student({"name": "Harry", "occupation": "Wizard", "existing_skills": ["Parseltongue"]})
+test.get_student_by_date("05/21/91")
 
-test.get_student_with_skill("Parseltongue")
+# test.get_student_with_skill("Parseltongue")
 
 
