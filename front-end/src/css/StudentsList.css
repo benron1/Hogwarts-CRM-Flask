@@ -1,0 +1,60 @@
+
+.ag-theme-alpine{
+    margin-left: 10%;
+    width: 60%;
+    height: 500px;
+
+}
+
+.deleteBtn{
+    background-color: rgb(189, 78, 85);
+    border: 1px solid black;
+}
+
+.deleteBtn:hover{
+    background-color: rgb(110, 23, 29);
+    border: 1px solid black;
+}
+
+.deleteText{
+    color: rgb(189, 78, 85);
+    
+}
+
+.goldenSnitch{
+    width: 150px;
+}
+
+.flexBox{
+    display: flex;
+}
+
+.ag-header-cell{
+    background-color:rgb(255, 217, 0); 
+}
+
+/* .ag-center-cols-viewport{
+    background-color:red;
+} */
+
+/* .ag-body-viewport{
+    background-color:red;
+
+}
+.ag-layout-normal{
+    background-color:red;
+
+}
+.ag-row-no-animation{
+         background-color:red;
+
+ } */
+
+/* .ag-header-container{
+    background-color:rgba(255, 217, 0, 0.356);
+} */
+
+/* .ag-header-cell-sortable{
+    background-color:rgb(255, 217, 0);
+
+} */
