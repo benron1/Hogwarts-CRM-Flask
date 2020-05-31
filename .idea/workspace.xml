@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a0918e95-76a6-4987-8b70-44967404afd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/Validators/validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/Validators/validator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/StudentPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/StudentPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/components/StudentsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/StudentsList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/lib/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/css/NewStudent.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/css/NewStudent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/css/StudentsList.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/css/StudentsList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/newStudent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/newStudent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

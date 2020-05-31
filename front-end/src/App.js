@@ -59,7 +59,7 @@ class App extends React.Component {
                 <HouseScore />
               </Route>
 
-              <Route path={`/studentPage`}>
+              <Route path={`/studentPage/:id`}>
                 <StudentPage />
               </Route>
             </AppContext.Provider>

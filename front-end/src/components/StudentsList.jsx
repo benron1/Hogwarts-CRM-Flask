@@ -20,6 +20,7 @@ class StudentsList extends React.Component {
         this.state = {
             acciStudent: false,
             idRoute: "",
+            userId: "",
             columnDefs: [
                 {
                     headerName: "",
@@ -116,6 +117,7 @@ class StudentsList extends React.Component {
         const selectedData = selectedNodes.map((node) => node.data);
         if (selectedData[0] !== undefined) {
             this.setState({ acciStudent: true });
+            this.setState({ userId: selectedData[0]._id })
             callback(selectedData[0]._id);
         }
     };
@@ -152,7 +154,7 @@ class StudentsList extends React.Component {
                                         onClick={(event) => this.onAccioClick(event, getID)}
                                     >
                                         {this.state.acciStudent === true && (
-                                            <Redirect to={"/studentPage"} />
+                                            <Redirect to={`/studentPage/${this.state.userId}`} />
                                         )}
                                         Accio Student
 									</Button>
