@@ -1,60 +1,90 @@
-
-.ag-theme-alpine{
-    margin-left: 10%;
-    width: 60%;
-    height: 500px;
-
+*{
+    font-family: cursive;
 }
 
-.deleteBtn{
+.ag-theme-alpine {
+    margin: auto;
+    /* width: 100%; */
+    height: 500px;
+    width: 75vw;
+}
+
+.deleteBtn {
     background-color: rgb(189, 78, 85);
     border: 1px solid black;
+    margin:5px
 }
 
-.deleteBtn:hover{
-    background-color: rgb(110, 23, 29);
+.deleteBtn:hover {
+    background-color: rgb(129, 52, 57);
     border: 1px solid black;
 }
 
-.deleteText{
-    color: rgb(189, 78, 85);
-    
+.deleteText {
+    color: white;
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow:5px 5px 10px black;
 }
 
-.goldenSnitch{
+.goldenSnitch {
     width: 150px;
 }
 
-.flexBox{
+.flexBox {
     display: flex;
 }
-
-.ag-header-cell{
-    background-color:rgb(255, 217, 0); 
+.flexBoxColum {
+    display: flex;
+    flex-direction: column;
 }
 
-/* .ag-center-cols-viewport{
-    background-color:red;
-} */
-
-/* .ag-body-viewport{
-    background-color:red;
-
+.ag-center-cols-viewport {
+    background-image: url("https://thumbs.dreamstime.com/b/high-detail-full-vector-light-parchment-very-detailed-design-old-paper-56493820.jpg");
 }
-.ag-layout-normal{
-    background-color:red;
 
+.ag-theme-alpine .ag-root-wrapper {
+    border: none;
 }
-.ag-row-no-animation{
-         background-color:red;
 
- } */
+.ag-header-cell {
+    background-color: #683f27;
+    font-size: 14px;
+    background-image: url("https://www.transparenttextures.com/patterns/leather.png");
+}
 
-/* .ag-header-container{
-    background-color:rgba(255, 217, 0, 0.356);
+.ag-cell {
+    background-image: url("https://thumbs.dreamstime.com/b/high-detail-full-vector-light-parchment-very-detailed-design-old-paper-56493820.jpg");
+    font-family: cursive;
+    font-size: 14px;
+    color: black;
+}
+/* 
+.container .addBtn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 0px;
+    top: 61vh;
+    left: 72vw;
 } */
 
-/* .ag-header-cell-sortable{
-    background-color:rgb(255, 217, 0);
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
 
-} */
+.goTOpage{
+    background-color: rgb(187, 160, 84);
+}
+
+.goTOpage:hover{
+    background-color: rgb(139, 115, 47);
+}
+
+.borderBtn{
+    border: 1px solid black;
+}

@@ -84,7 +84,7 @@ def delete_student_route(student_id):
     try:
         validator.validate_objectid(student_id)
     except Exception as error:
-        response = app.response_class(response=json.dumps({'Error': str(error)}), status=400,
+         response = app.response_class(response=json.dumps({'Error': str(error)}), status=400,
                                       mimetype="application/json")
     deleted_student = db.delete_student(student_id)
     if not deleted_student:

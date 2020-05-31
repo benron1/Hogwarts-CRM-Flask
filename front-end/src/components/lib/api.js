@@ -10,7 +10,7 @@ export function getAllStudents() {
 }
 
 export function getSingleStudent(student_id) {
-    return axios.get(`${baseUrl}/students/${student_id}`);
+    return axios.get(`${baseUrl}/student/${student_id}`);
 }
 
 export function getStudentWithSkill(skill) {
@@ -54,7 +54,7 @@ export async function setUserSkills(student_id, skills) {
 export async function deleteStudent(student_id) {
     console.log(student_id)
     await axios
-        .delete(`${baseUrl}/student/delete/${student_id}`)
+        .delete(`${baseUrl}/student/${student_id}`)
         .then((response) => {
             console.log(response);
         });

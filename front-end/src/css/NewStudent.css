@@ -2,14 +2,17 @@
 
 .addBtn{
     margin: 5px;
+    /* height:60px;
+    width:60px; */
     background-color:rgb(96, 134, 86);
-    border: 1px solid rgb(96, 134, 86);
     text-align: center;
+    z-index: 1;
 }
+
 .addBtn:hover{
     margin: 5px;
-    background-color:gold;
-    border: 1px solid rgb(96, 134, 86);
+    background-color:rgb(59, 85, 53);
+    border: 1px solid black;
     text-align: center;
 }
 
@@ -18,15 +21,16 @@
     padding: 15px;
     border-radius: 10px;
     background-image: url("https://i.pinimg.com/originals/8f/b0/7d/8fb07d1d8660048cc089a07047e7e77d.jpg");
-    /* background-image: url("https://www.netanella.com/pictures/a21463-r.jpg"); */
 }
-
-/* .popup-content {
-    background-color: none;
-    border: none;
-} */
-
 
 .RequiredText{
     color: rgb(189, 78, 85);
+}
+
+.addStudentBtn{
+    background-color:rgb(96, 134, 86);
+}
+
+.addStudentBtn:hover{
+    background-color:rgb(52, 87, 43);
 }

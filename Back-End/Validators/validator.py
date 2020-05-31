@@ -39,9 +39,9 @@ class Validators:
         if not student_house.lower() in self.houses:
             raise ValueError("House {} does not exist.".format(student_house))
 
-    # def validate_objectid(self, object_id):
-    #     if not bson.objectid.ObjectId.is_valid(object_id):
-    #         raise ValueError("'{}' is an invalid id.".format(object_id))
+    def validate_objectid(self, object_id):
+        if not bson.objectid.ObjectId.is_valid(object_id):
+            raise ValueError("'{}' is an invalid id.".format(object_id))
     #
     # def validate_item_is_int(self, item):
     #     if not isinstance(item, int):
