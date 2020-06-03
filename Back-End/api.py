@@ -111,6 +111,31 @@ def get_single_student_route(student_id):
         response = app.response_class(response=json.dumps(student), status=200, mimetype="application/json")
     return response
 
+# @app.route("/student/update_student/<student_id>", methods=['POST'])
+# def set_student_skills_route(student_id):
+#     try:
+#         validator.validate_objectid(student_id)
+#     except Exception as error:
+#         response = app.response_class(response=json.dumps({"Error": str(error)}), status=400,
+#                                       mimetype="application/json")
+#         return response
+#     student = db.get_single_student(student_id)
+#     if not student:
+#         response_body = {"Error": "Id '{}' does not exist.".format(student_id)}
+#         response = app.response_class(response=json.dumps(response_body), status=404, mimetype="application/json")
+#         return response
+#     else:
+#         updates_to_user = request.json
+#         print('updates_to_user')
+#         print(updates_to_user)
+#         try:
+#             updated_student = db.update_student(student_id, updates_to_user)
+#             response = app.response_class(response=json.dumps(updated_student), status=200, mimetype="application/json")
+#             return response
+#         except Exception as error:
+#             response = app.response_class(response=json.dumps({"Error": str(error)}), status=400, mimetype="application/json")
+#             return response
+
 @app.route("/student/update_student/<student_id>", methods=['POST'])
 def set_student_skills_route(student_id):
     try:
@@ -122,17 +147,21 @@ def set_student_skills_route(student_id):
     student = db.get_single_student(student_id)
     if not student:
         response_body = {"Error": "Id '{}' does not exist.".format(student_id)}
-        response = app.response_class(response=json.dumps(response_body), status=404, mimetype="application/json")
+        response = app.response_class(response=json.dumps(response_body), status=404,
+                                      mimetype="application/json")
         return response
     else:
-        updates_to_user = request.form
+        updates_to_user = request.json
+        print("updates to user")
         print(updates_to_user)
         try:
             updated_student = db.update_student(student_id, updates_to_user)
-            response=app.response_class(response=json.dumps(updated_student), status=200, mimetype="application/json")
+            response = app.response_class(response=json.dumps(updated_student), status=200,
+                                          mimetype="application/json")
             return response
         except Exception as error:
-            response=app.response_class(response=json.dumps({"Error": str(error)}), status=400, mimetype="application/json")
+            response = app.response_class(response=json.dumps({"Error": str(error)}), status=400,
+                                          mimetype="application/json")
             return response
 
 

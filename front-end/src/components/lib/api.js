@@ -13,8 +13,8 @@ export function getSingleStudent(student_id) {
     return axios.get(`${baseUrl}/student/${student_id}`);
 }
 
-export function getStudentWithSkill(skill) {
-    return axios.get(`${baseUrl}/students/${skill}`);
+export function getStudentWithSkill(current_skills) {
+    return axios.get(`${baseUrl}/students/${current_skills}`);
 }
 
 export function getStudentWhoWantSkill(skill) {
@@ -39,9 +39,10 @@ export function addStudent(data) {
     );
 }
 
-export async function setUserSkills(student_id, skills) {
+export async function setUserSkills(student_id, existing_skills) {
+    console.log(existing_skills)
     await axios
-        .post(`${baseUrl}/student/${student_id}/set_skills/${skills}`)
+        .post(`${baseUrl}/student/update_student/${student_id}`, { existing_skills })
         .then((response) => {
             console.log(response);
         }, (error) => {

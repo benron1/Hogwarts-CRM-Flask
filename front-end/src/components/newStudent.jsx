@@ -11,7 +11,7 @@ class PopupOnFocus extends React.Component {
             first_name: "",
             last_name: "",
             house: "",
-            existing_skills: "",
+            existing_skills: [],
             desired_skills: "",
             course_interests: "",
         };
@@ -23,7 +23,8 @@ class PopupOnFocus extends React.Component {
 
 
     render() {
-        // console.log(this.state)
+        console.log(this.state.existing_skills)
+
         return (
             <Popup
                 trigger={
@@ -82,7 +83,8 @@ class PopupOnFocus extends React.Component {
                             type="text"
                             name="existing_skills"
                             placeholder="Enter Current skills"
-                            onChange={(event) => this.setState({ existing_skills: event.target.value.toLowerCase() })}
+                            onChange={(event) => this.setState({ existing_skills: [...this.state.existing_skills, event.target.value.toLowerCase()] })}
+
 
                         />
                     </Form.Group>

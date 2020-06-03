@@ -69,14 +69,26 @@ class DbFunctions:
         return students_created_in_month
 
     def update_student(self, student_id, dict):
+        print("studentid dict db")
+        print(student_id)
+        print(dict)
+        current_skills = db.students
         for key in dict:
             key_is_valid = False
+            print("student field-db")
+            print(student_fields)
             for i in student_fields:
+                print("i - db")
+                print(i)
                 if key == i:
                     key_is_valid = True
                 if key_is_valid:
                     single_entry = {key: dict[key], "last_update_time": datetime.datetime.now().isoformat()}
+                    print("single entry")
+                    print(single_entry)
                     dict_to_update = {'$set': single_entry}
+                    print("dict to update")
+                    print(dict_to_update)
                     student = db.students.update_one({"_id": ObjectId(student_id)}, dict_to_update)
             if not key_is_valid:
                 invalid_key = key

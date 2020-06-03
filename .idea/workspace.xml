@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a0918e95-76a6-4987-8b70-44967404afd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/StudentPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/StudentPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/StudentsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/StudentsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/db_functions/db_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/db_functions/db_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/models/student.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/models/student.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/EditStudent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/EditStudent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/components/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/lib/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front-end/src/components/newStudent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/newStudent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/css/NewStudent.css" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/css/NewStudent.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,22 +97,38 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="364" y="259" key="FileChooserDialogImpl/0.23.1440.877@0.23.1440.877" timestamp="1590495402158" />
-    <state width="1283" height="206" key="GridCell.Tab.0.bottom" timestamp="1590912306846">
+    <state width="1419" height="206" key="GridCell.Tab.0.bottom" timestamp="1591199360860">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1283" height="206" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590912306846" />
-    <state width="1283" height="206" key="GridCell.Tab.0.center" timestamp="1590912306844">
+    <state width="1419" height="206" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1591199360860" />
+    <state width="1419" height="206" key="GridCell.Tab.0.center" timestamp="1591199360858">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1283" height="206" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1590912306844" />
-    <state width="1283" height="206" key="GridCell.Tab.0.left" timestamp="1590912306843">
+    <state width="1419" height="206" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1591199360858" />
+    <state width="1419" height="206" key="GridCell.Tab.0.left" timestamp="1591199360858">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1283" height="206" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1590912306843" />
-    <state width="1283" height="206" key="GridCell.Tab.0.right" timestamp="1590912306845">
+    <state width="1419" height="206" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1591199360858" />
+    <state width="1419" height="206" key="GridCell.Tab.0.right" timestamp="1591199360859">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1283" height="206" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1590912306845" />
+    <state width="1419" height="206" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1591199360859" />
+    <state width="1419" height="285" key="GridCell.Tab.1.bottom" timestamp="1590947930635">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590947930635" />
+    <state width="1419" height="285" key="GridCell.Tab.1.center" timestamp="1590947930633">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1590947930633" />
+    <state width="1419" height="285" key="GridCell.Tab.1.left" timestamp="1590947930632">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1590947930632" />
+    <state width="1419" height="285" key="GridCell.Tab.1.right" timestamp="1590947930634">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1419" height="285" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1590947930634" />
     <state x="223" y="83" key="SettingsEditor" timestamp="1590496334369">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

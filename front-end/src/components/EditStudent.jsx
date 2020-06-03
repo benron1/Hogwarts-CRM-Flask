@@ -1,117 +1,78 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import { Button, Form } from "react-bootstrap";
-import { addStudent } from "./lib/api.js";
 import "../css/NewStudent.css";
+import { withRouter } from "react-router-dom";
+import { getSingleStudent, setUserSkills } from "./lib/api";
+import "../css/EditStudent.css";
 
 class PopupOnFocus extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            first_name: "",
-            last_name: "",
-            house: "",
-            existing_skills: "",
-            desired_skills: "",
-            course_interests: "",
+            infoStudent: {},
+            existing_skills: [],
+            input_value: ''
         };
     }
 
-    handleOnSubmit() {
-        addStudent(this.state)
+    handleOnSubmit(event) {
+        event.preventDefault()
+        let { infoStudent, existing_skills } = this.state;
+        console.log(infoStudent._id);
+        console.log(this.state.existing_skills)
+        setUserSkills(infoStudent._id, this.state.input_value);
+        // this.setState({ existing_skills: this.state.input_value })
+        // this.setState({ existing_skills: [...this.state.existing_skills, this.state.input_value] })
     }
 
+    componentDidMount() {
+        let paramsId = this.props.match.params.id;
+        getSingleStudent(paramsId).then((response) => {
+            this.setState({ infoStudent: response.data });
+
+        });
+    }
 
     render() {
-        // console.log(this.state)
+        let { infoStudent } = this.state;
+        // console.log(infoStudent);
         return (
             <Popup
                 trigger={
-                    <Button variant="primary" className="addBtn">
-                        {" "}
-                        Add Student{" "}
-                    </Button>
+                    <Button variant="primary" className="studentPageBtn">
+                        Edit Skills
+					</Button>
                 }
                 modal
                 closeOnDocumentClick
             >
-                {/* <Form onSubmit={this.handleOnSubmit}> */}
-                <Form className="popUpForm" onSubmit={(event) => this.handleOnSubmit(event)}>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>First Name</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="first_name"
-                            placeholder="Enter First Name"
-                            onChange={(event) =>
-                                this.setState({ first_name: event.target.value.toLowerCase() })
-                            }
-                        />
-                        <Form.Text className="RequiredText">*Required Text</Form.Text>
-                    </Form.Group>
+                <Form
+                    className="popUpForm"
+                    onSubmit={(event) => this.handleOnSubmit(event)}
+                >
+                    <div className="name">
+                        Name: {infoStudent.first_name} {infoStudent.last_name}
+                    </div>
+                    <div className="house">House: {infoStudent.house}</div>
 
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Last Name</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="last_name"
-                            placeholder="Enter Last Name"
-                            onChange={(event) =>
-                                this.setState({ last_name: event.target.value.toLowerCase() })
-                            }
-                        />
-                        <Form.Text className="RequiredText">*Required Text</Form.Text>
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>House</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="house"
-                            placeholder="Enter House"
-                            onChange={(event) =>
-                                this.setState({ house: event.target.value.toLowerCase() })
-                            }
-                        />
-                        <Form.Text className="RequiredText">*Required Text</Form.Text>
-                    </Form.Group>
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Existing skills</Form.Label>
+                    <Form.Group>
+                        <Form.Label>Add Current skills</Form.Label>
                         <Form.Control
                             type="text"
                             name="existing_skills"
-                            placeholder="Enter Current skills"
-                            onChange={(event) => this.setState({ existing_skills: event.target.value.toLowerCase() })}
-
-                        />
-                    </Form.Group>
-                    {/* change name */}
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Desired skills</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="desired_skills"
-                            placeholder="Enter Desired skills"
-                            onChange={(event) => this.setState({ desired_skills: event.target.value.toLowerCase() })}
-
-                        />
-                    </Form.Group>
-                    {/* change name */}
-
-                    <Form.Group controlId="formBasicPassword">
-                        <Form.Label>Course Interests</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="course_interests"
-                            placeholder="Enter Course Interests"
-                            onChange={(event) => this.setState({ course_interests: event.target.value.toLowerCase() })}
-
+                            placeholder="Add Current skills"
+                            onChange={(event) =>
+                                this.setState({ input_value: event.target.value.toLowerCase() })
+                            }
                         />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button
+                        variant="primary"
+                        type="submit"
+                        className="addStudentBtn borderBtn"
+                    >
                         Submit
 					</Button>
                 </Form>
@@ -120,20 +81,4 @@ class PopupOnFocus extends React.Component {
     }
 }
 
-export default PopupOnFocus;
-
-
-
-    // async handleOnSubmit(event) {
-    //     event.preventDefault();
-    //     let student = {
-    //             "first_name": this.state.first_name,
-    //             "last_name": this.state.last_name,
-    //             "house": this.state.house,
-    //             "current_magic_skills": this.state.current_magic_skills,
-    //             "want_skills": this.state.want_skills,
-    //             "course_interests": this.state.course_interests
-    //         }
-    //     console.log(student)
-    //     const response = await addStudent(student);
-    //     }
+export default withRouter(PopupOnFocus);

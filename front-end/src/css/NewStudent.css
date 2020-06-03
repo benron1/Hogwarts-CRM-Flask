@@ -34,3 +34,8 @@
 .addStudentBtn:hover{
     background-color:rgb(52, 87, 43);
 }
+
+.popup-content{
+    padding: 0px !important;
+    border-radius: 10px;
+}
